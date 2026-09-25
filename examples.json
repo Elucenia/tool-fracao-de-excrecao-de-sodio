@@ -1,0 +1,80 @@
+[
+  {
+    "label": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "raw": {
+        "fena": 0.1429
+      },
+      "level": "mid",
+      "verdict": "pré-renal",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+    "input": {
+      "una": 35,
+      "pna": 140,
+      "ucr": 50,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "raw": {
+        "fena": 1
+      },
+      "main": "1,00",
+      "verdict": "intermediária",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "una": 35,
+      "pna": 140,
+      "ucr": 50,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+    "input": {
+      "una": 60,
+      "pna": 135,
+      "ucr": 40,
+      "pcr": 4,
+      "diuretico": "1"
+    },
+    "expected": {
+      "raw": {
+        "fena": 4.444
+      },
+      "level": "high",
+      "verdict": "necrose tubular",
+      "tol": 0.01
+    },
+    "originalInput": {
+      "una": 60,
+      "pna": 135,
+      "ucr": 40,
+      "pcr": 4,
+      "diuretico": "1"
+    },
+    "expandedZeroOptions": []
+  }
+]

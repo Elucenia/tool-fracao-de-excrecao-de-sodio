@@ -1,0 +1,204 @@
+{
+  "tool": {
+    "id": "fracao-de-excrecao-de-sodio",
+    "title": "Fração de excreção de sódio (FENa)",
+    "short": "Pré-renal ou necrose tubular aguda na LRA oligúrica",
+    "desc": "Calcule a fração de excreção de sódio (FENa) para diferenciar azotemia pré-renal de necrose tubular aguda na lesão renal aguda oligúrica.",
+    "lead": "Mede a porcentagem do sódio filtrado que é excretada na urina. Na lesão renal aguda oligúrica, ajuda a separar a azotemia pré-renal (túbulo íntegro, que retém sódio) da necrose tubular aguda.",
+    "spec": [
+      "nefrologia",
+      "clinica-medica",
+      "medicina-intensiva",
+      "medicina-de-emergencia"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "una",
+        "Sódio urinário",
+        "num",
+        {
+          "min": 1,
+          "max": 300,
+          "unit": "mEq/L",
+          "ph": "20"
+        }
+      ],
+      [
+        "pna",
+        "Sódio sérico",
+        "num",
+        {
+          "min": 100,
+          "max": 180,
+          "unit": "mEq/L",
+          "ph": "140"
+        }
+      ],
+      [
+        "ucr",
+        "Creatinina urinária",
+        "num",
+        {
+          "min": 1,
+          "max": 500,
+          "step": 0.1,
+          "unit": "mg/dL",
+          "ph": "80"
+        }
+      ],
+      [
+        "pcr",
+        "Creatinina sérica",
+        "num",
+        {
+          "min": 0.2,
+          "max": 20,
+          "step": 0.01,
+          "unit": "mg/dL",
+          "ph": "2,5"
+        }
+      ],
+      [
+        "diuretico",
+        "Usou diurético nas últimas 24 h?",
+        "radio",
+        {
+          "opts": {
+            "0": "Não",
+            "1": "Sim"
+          }
+        }
+      ]
+    ],
+    "formula": "<p>FENa (%) = (Na urinário × creatinina sérica) ÷ (Na sérico × creatinina urinária) × 100.</p><p>Use amostras de urina e sangue colhidas no mesmo momento, antes de diurético ou de volume, sempre que possível.</p>",
+    "table": [
+      [
+        "FENa",
+        "Interpretação"
+      ],
+      [
+        "&lt; 1%",
+        "Sugere azotemia pré-renal"
+      ],
+      [
+        "1 a 2%",
+        "Zona intermediária"
+      ],
+      [
+        "&gt; 2%",
+        "Sugere necrose tubular aguda"
+      ]
+    ],
+    "table_note": "O corte de 1% foi descrito em pacientes oligúricos (Miller 1978). Na oligúria, a FENa não substitui a avaliação da volemia e do sedimento urinário.",
+    "tips": [
+      "O teste foi validado na <strong>oligúria</strong>: em pacientes com diurese preservada, uma FENa &lt; 1% é comum mesmo sem hipovolemia.",
+      "Diuréticos aumentam a FENa no estado pré-renal. Se o paciente usou diurético, calcule a <strong>fração de excreção de ureia</strong> (≤ 35% sugere pré-renal).",
+      "FENa &lt; 1% também ocorre em causas não pré-renais: glomerulonefrite aguda, nefropatia por contraste, rabdomiólise, sepse precoce e síndrome hepatorrenal.",
+      "Doença renal crônica prévia, glicosúria e bicarbonatúria elevam a FENa e reduzem sua utilidade.",
+      "Um sedimento com cilindros granulosos \"marrom-barrentos\" reforça necrose tubular aguda mais que qualquer índice isolado."
+    ],
+    "sources": [
+      [
+        "Miller TR et al. Urinary diagnostic indices in acute renal failure: a prospective study. Ann Intern Med, 1978.",
+        "https://doi.org/10.7326/0003-4819-89-1-47"
+      ],
+      [
+        "Espinel CH. The FENa test: use in the differential diagnosis of acute renal failure. JAMA, 1976.",
+        "https://doi.org/10.1001/jama.1976.03270060029022"
+      ],
+      [
+        "Steiner RW. Interpreting the fractional excretion of sodium. Am J Med, 1984.",
+        "https://doi.org/10.1016/0002-9343(84)90368-1"
+      ]
+    ],
+    "cases": [
+      [
+        "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        {
+          "una": 10,
+          "pna": 140,
+          "ucr": 100,
+          "pcr": 2,
+          "diuretico": "0"
+        },
+        {
+          "raw": {
+            "fena": 0.1429
+          },
+          "level": "mid",
+          "verdict": "pré-renal",
+          "tol": 0.001
+        }
+      ],
+      [
+        "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        {
+          "una": 35,
+          "pna": 140,
+          "ucr": 50,
+          "pcr": 2,
+          "diuretico": "0"
+        },
+        {
+          "raw": {
+            "fena": 1
+          },
+          "main": "1,00",
+          "verdict": "intermediária",
+          "tol": 0.001
+        }
+      ],
+      [
+        "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        {
+          "una": 60,
+          "pna": 135,
+          "ucr": 40,
+          "pcr": 4,
+          "diuretico": "1"
+        },
+        {
+          "raw": {
+            "fena": 4.444
+          },
+          "level": "high",
+          "verdict": "necrose tubular",
+          "tol": 0.01
+        }
+      ]
+    ],
+    "batch": "renal-digestivo",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "renal-digestivo",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/renal-digestivo.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/renal-digestivo.php",
+    "sha256": "95087d729438637d36e1a49af04d8de0fe1d9f7876443084443906a9281ef107",
+    "bytes": 109421
+  },
+  "clinicalValidation": "not-performed"
+}
