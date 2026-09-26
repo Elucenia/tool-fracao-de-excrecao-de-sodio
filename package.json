@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-fracao-de-excrecao-de-sodio",
   "version": "0.1.0",
-  "description": "Fração de excreção de sódio (FENa) · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "Fração de excreção de sódio (FENa) · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
