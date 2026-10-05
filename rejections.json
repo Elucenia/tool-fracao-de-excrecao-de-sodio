@@ -1,0 +1,678 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field una",
+    "input": {
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field una",
+    "input": {
+      "una": "",
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" una",
+    "input": {
+      "una": "NaN",
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" una",
+    "input": {
+      "una": "Infinity",
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" una",
+    "input": {
+      "una": "1e309",
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" una",
+    "input": {
+      "una": "invalid",
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} una",
+    "input": {
+      "una": {},
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true una",
+    "input": {
+      "una": true,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum una",
+    "input": {
+      "una": 0,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum una",
+    "input": {
+      "una": 330,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "una"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pna",
+    "input": {
+      "una": 10,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pna",
+    "input": {
+      "una": 10,
+      "pna": "",
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" pna",
+    "input": {
+      "una": 10,
+      "pna": "NaN",
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" pna",
+    "input": {
+      "una": 10,
+      "pna": "Infinity",
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" pna",
+    "input": {
+      "una": 10,
+      "pna": "1e309",
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" pna",
+    "input": {
+      "una": 10,
+      "pna": "invalid",
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} pna",
+    "input": {
+      "una": 10,
+      "pna": {},
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true pna",
+    "input": {
+      "una": 10,
+      "pna": true,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum pna",
+    "input": {
+      "una": 10,
+      "pna": 90,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum pna",
+    "input": {
+      "una": 10,
+      "pna": 198,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pna"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": "",
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": "NaN",
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": "Infinity",
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": "1e309",
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": "invalid",
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": {},
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": true,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 0,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum ucr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 550,
+      "pcr": 2,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "ucr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": "",
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": "NaN",
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": "Infinity",
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": "1e309",
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": "invalid",
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": {},
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": true,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": -0.8,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum pcr",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 22,
+      "diuretico": "0"
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pcr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field diuretico",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "diuretico"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field diuretico",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "diuretico"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option diuretico",
+    "input": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "__ELUCENIA_INVALID_OPTION__"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "diuretico"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

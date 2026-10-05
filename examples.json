@@ -1,6 +1,16 @@
 [
   {
-    "label": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+    "id": "fracao-de-excrecao-de-sodio",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+    "originalInput": {
+      "una": 10,
+      "pna": 140,
+      "ucr": 100,
+      "pcr": 2,
+      "diuretico": "0"
+    },
     "input": {
       "una": 10,
       "pna": 140,
@@ -16,17 +26,37 @@
       "verdict": "pré-renal",
       "tol": 0.001
     },
+    "recordedResult": {
+      "main": [
+        "0,14",
+        "%"
+      ],
+      "label": "Fração de excreção de sódio",
+      "raw": {
+        "fena": 0.14285714285714285
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "fracao-de-excrecao-de-sodio",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
     "originalInput": {
-      "una": 10,
+      "una": 35,
       "pna": 140,
-      "ucr": 100,
+      "ucr": 50,
       "pcr": 2,
       "diuretico": "0"
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
     "input": {
       "una": 35,
       "pna": 140,
@@ -42,17 +72,37 @@
       "verdict": "intermediária",
       "tol": 0.001
     },
-    "originalInput": {
-      "una": 35,
-      "pna": 140,
-      "ucr": 50,
-      "pcr": 2,
-      "diuretico": "0"
+    "recordedResult": {
+      "main": [
+        "1,00",
+        "%"
+      ],
+      "label": "Fração de excreção de sódio",
+      "raw": {
+        "fena": 1
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+    "id": "fracao-de-excrecao-de-sodio",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+    "originalInput": {
+      "una": 60,
+      "pna": 135,
+      "ucr": 40,
+      "pcr": 4,
+      "diuretico": "1"
+    },
     "input": {
       "una": 60,
       "pna": 135,
@@ -68,13 +118,23 @@
       "verdict": "necrose tubular",
       "tol": 0.01
     },
-    "originalInput": {
-      "una": 60,
-      "pna": 135,
-      "ucr": 40,
-      "pcr": 4,
-      "diuretico": "1"
+    "recordedResult": {
+      "main": [
+        "4,44",
+        "%"
+      ],
+      "label": "Fração de excreção de sódio",
+      "raw": {
+        "fena": 4.444444444444445
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

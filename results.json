@@ -1,0 +1,283 @@
+{
+  "id": "fracao-de-excrecao-de-sodio",
+  "at": "2026-10-05T17:29:35.152Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/fracao-de-excrecao-de-sodio/calculator.js",
+    "bytes": 5226,
+    "sha256": "0e50f6e4a6a04b9b54c10c91283dfc51e9210df923a98d8d9676b3a639933f23"
+  },
+  "cases": [
+    {
+      "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+      "input": {
+        "una": 10,
+        "pna": 140,
+        "ucr": 100,
+        "pcr": 2,
+        "diuretico": "0"
+      },
+      "obtained": {
+        "id": "fracao-de-excrecao-de-sodio",
+        "main": [
+          "0,14",
+          "%"
+        ],
+        "label": "Fração de excreção de sódio",
+        "raw": {
+          "fena": 0.14285714285714285
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.fena",
+          "expected": 0.1429,
+          "obtained": 0.14285714285714285,
+          "tolerance": 0.001,
+          "difference": 0.00004285714285715003,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fena",
+          "expected": 0.14285714285714285,
+          "obtained": 0.14285714285714285,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,14",
+          "obtained": "0,14",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "%",
+          "obtained": "%",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+      "input": {
+        "una": 35,
+        "pna": 140,
+        "ucr": 50,
+        "pcr": 2,
+        "diuretico": "0"
+      },
+      "obtained": {
+        "id": "fracao-de-excrecao-de-sodio",
+        "main": [
+          "1,00",
+          "%"
+        ],
+        "label": "Fração de excreção de sódio",
+        "raw": {
+          "fena": 1
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "1,00",
+          "obtained": "1,00",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.fena",
+          "expected": 1,
+          "obtained": 1,
+          "tolerance": 0.001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fena",
+          "expected": 1,
+          "obtained": 1,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1,00",
+          "obtained": "1,00",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "%",
+          "obtained": "%",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+      "input": {
+        "una": 60,
+        "pna": 135,
+        "ucr": 40,
+        "pcr": 4,
+        "diuretico": "1"
+      },
+      "obtained": {
+        "id": "fracao-de-excrecao-de-sodio",
+        "main": [
+          "4,44",
+          "%"
+        ],
+        "label": "Fração de excreção de sódio",
+        "raw": {
+          "fena": 4.444444444444445
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.fena",
+          "expected": 4.444,
+          "obtained": 4.444444444444445,
+          "tolerance": 0.01,
+          "difference": 0.00044444444444469156,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fena",
+          "expected": 4.444444444444445,
+          "obtained": 4.444444444444445,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "4,44",
+          "obtained": "4,44",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "%",
+          "obtained": "%",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 47,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

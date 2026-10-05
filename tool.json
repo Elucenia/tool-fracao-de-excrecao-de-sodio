@@ -5,13 +5,13 @@
     "short": "Pré-renal ou necrose tubular aguda na LRA oligúrica",
     "desc": "Calcule a fração de excreção de sódio (FENa) para diferenciar azotemia pré-renal de necrose tubular aguda na lesão renal aguda oligúrica.",
     "lead": "Mede a porcentagem do sódio filtrado que é excretada na urina. Na lesão renal aguda oligúrica, ajuda a separar a azotemia pré-renal (túbulo íntegro, que retém sódio) da necrose tubular aguda.",
+    "kind": "Calculadora",
     "spec": [
       "nefrologia",
       "clinica-medica",
       "medicina-intensiva",
       "medicina-de-emergencia"
     ],
-    "tier": 1,
     "fields": [
       [
         "una",
@@ -72,32 +72,6 @@
       ]
     ],
     "formula": "<p>FENa (%) = (Na urinário × creatinina sérica) ÷ (Na sérico × creatinina urinária) × 100.</p><p>Use amostras de urina e sangue colhidas no mesmo momento, antes de diurético ou de volume, sempre que possível.</p>",
-    "table": [
-      [
-        "FENa",
-        "Interpretação"
-      ],
-      [
-        "&lt; 1%",
-        "Sugere azotemia pré-renal"
-      ],
-      [
-        "1 a 2%",
-        "Zona intermediária"
-      ],
-      [
-        "&gt; 2%",
-        "Sugere necrose tubular aguda"
-      ]
-    ],
-    "table_note": "O corte de 1% foi descrito em pacientes oligúricos (Miller 1978). Na oligúria, a FENa não substitui a avaliação da volemia e do sedimento urinário.",
-    "tips": [
-      "O teste foi validado na <strong>oligúria</strong>: em pacientes com diurese preservada, uma FENa &lt; 1% é comum mesmo sem hipovolemia.",
-      "Diuréticos aumentam a FENa no estado pré-renal. Se o paciente usou diurético, calcule a <strong>fração de excreção de ureia</strong> (≤ 35% sugere pré-renal).",
-      "FENa &lt; 1% também ocorre em causas não pré-renais: glomerulonefrite aguda, nefropatia por contraste, rabdomiólise, sepse precoce e síndrome hepatorrenal.",
-      "Doença renal crônica prévia, glicosúria e bicarbonatúria elevam a FENa e reduzem sua utilidade.",
-      "Um sedimento com cilindros granulosos \"marrom-barrentos\" reforça necrose tubular aguda mais que qualquer índice isolado."
-    ],
     "sources": [
       [
         "Miller TR et al. Urinary diagnostic indices in acute renal failure: a prospective study. Ann Intern Med, 1978.",
@@ -168,9 +142,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -179,17 +150,226 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T12:26:57.342Z",
+      "total": 216,
+      "passed": 216,
+      "evidencePath": "reports/review-20261003/fena-precision-amendment-candidate-final22.json",
+      "evidenceSha256": "b417ec793165e6ccdab47424b1ca011e559fad6cd1a923f35b0bf2db5aafab03",
+      "scope": "Dimensionless fractional sodium excretion arithmetic only; no validation of renal diagnosis, diuretic interpretation or any threshold in the tool.",
+      "source": {
+        "edition": "Fractional Excretion of Sodium and Urea in Differentiating Acute Kidney Injury Phenotypes in Decompensated Cirrhosis, 2022",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9168716/",
+        "locator": "Methods, FENa calculation formula",
+        "access": "Primary indexed Methods equation read on 2026-10-04. Direct page retrieval returned a browser check; no full-text access or CAPTCHA bypass claimed.",
+        "scope": "Dimensionless fractional sodium excretion arithmetic only; no validation of renal diagnosis, diuretic interpretation or any threshold in the tool."
+      },
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "FENa/Espinel 1976:Miller 1978,100×UNa×PCr/(PNa×UCr); amostras simultâneas",
+    "implementationVersion": "fracao-de-excrecao-de-sodio@native-2026-10-04+0e50f6e4a6a0",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/666184/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "FENa (%) = (Na urinário × creatinina sérica) ÷ (Na sérico × creatinina urinária) × 100. Use amostras de urina e sangue colhidas no mesmo momento, antes de diurético ou de volume, sempre que possível.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "una",
+            "label": "Sódio urinário",
+            "type": "num",
+            "min": 1,
+            "max": 300,
+            "unit": "mEq/L",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "pna",
+            "label": "Sódio sérico",
+            "type": "num",
+            "min": 100,
+            "max": 180,
+            "unit": "mEq/L",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "ucr",
+            "label": "Creatinina urinária",
+            "type": "num",
+            "min": 1,
+            "max": 500,
+            "unit": "mg/dL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "pcr",
+            "label": "Creatinina sérica",
+            "type": "num",
+            "min": 0.2,
+            "max": 20,
+            "unit": "mg/dL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "diuretico",
+            "label": "Usou diurético nas últimas 24 h?",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Não",
+              "1": "Sim"
+            }
+          }
+        ],
+        "hash": "a69e38f83e88fb111181d8aeb861fa341b2c056759af2a50fccb307e2d817a00"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Miller TR et al. Urinary diagnostic indices in acute renal failure: a prospective study. Ann Intern Med, 1978.",
+          "url": "https://doi.org/10.7326/0003-4819-89-1-47",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Urinary diagnostic indices in acute renal failure: a prospective study.",
+            "year": "1978",
+            "firstPublicationDate": "1978-07-01",
+            "doi": "10.7326/0003-4819-89-1-47",
+            "pmid": "666184",
+            "journal": "Annals of internal medicine",
+            "authors": "Miller TR, Anderson RJ, Linas SL, Henrich WL, Berns AS, Gabow PA, Schrier RW."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/666184/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "7ffe5fe6274a9a63de9a411fcfb372925ce78b366739afb2988caf57e2bb2e20",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Espinel CH. The FENa test: use in the differential diagnosis of acute renal failure. JAMA, 1976.",
+          "url": "https://doi.org/10.1001/jama.1976.03270060029022",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "The FENa test. Use in the differential diagnosis of acute renal failure.",
+            "year": "1976",
+            "firstPublicationDate": "1976-08-01",
+            "doi": "10.1001/jama.236.6.579",
+            "pmid": "947239",
+            "journal": "JAMA",
+            "authors": "Espinel CH."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/947239/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "74d6d8b6eef4049ad245b1e7e700f02e72f8a5e9a5ab631db7857d62678d78e7",
+          "matchedBy": "exact-publication-title",
+          "publisherDepositedMetadata": {
+            "title": "The FeNa Test",
+            "doi": "10.1001/jama.1976.03270060029022",
+            "year": 1976,
+            "publisher": "American Medical Association (AMA)",
+            "journal": "JAMA",
+            "authors": [
+              "Carlos Hugo Espinel"
+            ],
+            "url": "https://doi.org/10.1001/jama.1976.03270060029022"
+          },
+          "doiAliasOrMismatchRequiresReview": {
+            "listed": "https://doi.org/10.1001/jama.1976.03270060029022",
+            "indexed": "10.1001/jama.236.6.579",
+            "crossrefListedDoiMetadataRead": true
+          }
+        },
+        {
+          "citation": "Steiner RW. Interpreting the fractional excretion of sodium. Am J Med, 1984.",
+          "url": "https://doi.org/10.1016/0002-9343(84)90368-1",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Interpreting the fractional excretion of sodium.",
+            "year": "1984",
+            "firstPublicationDate": "1984-10-01",
+            "doi": "10.1016/0002-9343(84)90368-1",
+            "pmid": "6486145",
+            "journal": "The American journal of medicine",
+            "authors": "Steiner RW."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/6486145/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "96184cdd77d0e7a090aaf4cb351e7d0a6714d9379c7918b97081d208e7045f11",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T12:26:57.342Z",
+        "total": 216,
+        "passed": 216,
+        "evidencePath": "reports/review-20261003/fena-precision-amendment-candidate-final22.json",
+        "scope": "Dimensionless fractional sodium excretion arithmetic only; no validation of renal diagnosis, diuretic interpretation or any threshold in the tool.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "5e37f164f88eed5f27169b2b9ccb3b7428766cda4810c438d6e9af05ee17b7ac"
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "0e50f6e4a6a04b9b54c10c91283dfc51e9210df923a98d8d9676b3a639933f23",
+      "technicalAmendment": {
+        "date": "2026-10-04",
+        "scope": "Removed premature six-decimal rounding before comparison with the unchanged source thresholds. Formula, fields and two-decimal main display retained.",
+        "evidencePath": "reports/review-20261003/independent-fena-precision-amendment-final22.json",
+        "baselineFailureCount": 216,
+        "clinicalApproval": "not-performed"
+      }
+    },
+    "limits": "A evidência de Miller 1978 refere-se à oligúria aguda e mostrou que índices urinários nem sempre separam causas pré-renais de necrose tubular. O resultado não estabelece sozinho a etiologia da disfunção renal. Condições clínicas, momento das amostras e medicamentos precisam ser considerados conforme a fonte da versão utilizada.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.975Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não documenta todas as condições de diuréticos ou outras causas de lesão renal; original Espinel 1976 não lido. Não se confirma exclusão de necrose tubular pelo valor isolado."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/fracao-de-excrecao-de-sodio/calculator.js",
+    "bytes": 5226,
+    "sha256": "0e50f6e4a6a04b9b54c10c91283dfc51e9210df923a98d8d9676b3a639933f23"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "608774ac22680ad478ac89b9ebaa76ec6ecd6732b69a9181206a4226f1d69cc9",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 216,
+      "sha256": "353e350058cf1726e7125d587fd50b8e24fd5bc4bcd94326780951341c679808",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
