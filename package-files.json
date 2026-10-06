@@ -1,6 +1,6 @@
 {
   "id": "fracao-de-excrecao-de-sodio",
-  "scope": "Exclusive report-owned R6-HTTP-linked candidate, read-only default test",
+  "scope": "Immutable package integrity; tests write no files",
   "files": [
     {
       "path": ".gitattributes",
@@ -24,8 +24,8 @@
     },
     {
       "path": "calculator.browser.js",
-      "bytes": 5226,
-      "sha256": "0e50f6e4a6a04b9b54c10c91283dfc51e9210df923a98d8d9676b3a639933f23"
+      "bytes": 5431,
+      "sha256": "4b7642e64226485e4173d02dff4d0a3372e344ff161445bf878f2fb1d5c8c500"
     },
     {
       "path": "calculator.js",
@@ -39,8 +39,8 @@
     },
     {
       "path": "CODE-COMPONENTS.md",
-      "bytes": 1119,
-      "sha256": "8ffa19801254df845c36459e48854477275342640b381b7a2437fa1bede35660"
+      "bytes": 1388,
+      "sha256": "05f820b57a1d1290be76ec615a4ab07595a5cdba5b57467b810ba31da4be9ebd"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -49,68 +49,78 @@
     },
     {
       "path": "demo-runtime.js",
-      "bytes": 11656,
-      "sha256": "734da1ceff19b961423e1bb5d2c9eaafd18920b32cc4f331856f6065c9cfd2c9"
+      "bytes": 14286,
+      "sha256": "187cb0a3f2693707660f7fc69fc63ce5e30055a5ccdc621cc7945a0d3b1d2918"
     },
     {
       "path": "documentation/ar.md",
-      "bytes": 4129,
-      "sha256": "47a91c571230aa9d8e96875a02c0bfaf5a7e0e61adf95feec4b4312525a5e93d"
+      "bytes": 4881,
+      "sha256": "6a01827f57a57851a93c32dc4028cf5efc5f1d0673d33be67a95941f59f93580"
     },
     {
       "path": "documentation/de.md",
-      "bytes": 3460,
-      "sha256": "6c74fca89d272f8203f4ee6e8b4fb6faae2fae80d7b0fd1e0ecae6cb77cbedf7"
+      "bytes": 4036,
+      "sha256": "afb30ec7e70ebe30aa0ed4480f49b8adbbe2c40c985baf1ecdbd1ecc26cb0677"
     },
     {
       "path": "documentation/en.md",
-      "bytes": 3084,
-      "sha256": "4b9f8698cc09c5b87a9bd669858ec4bd2835e2215ef0b2f57e690bf6e8ef78df"
+      "bytes": 3602,
+      "sha256": "b9228203a7564c02c7e7d0f776e7efe6b7e5d7c4d6258d1bf581f7867fe42205"
     },
     {
       "path": "documentation/es.md",
-      "bytes": 3413,
-      "sha256": "8faf439598466d70dcc2e5c63cc52046e9ae3412ca5b0ed3e4034a4a78474944"
+      "bytes": 3951,
+      "sha256": "7b6523228739179d9c302a0d541effb24141b56de94098307eafae616b52a7cf"
     },
     {
       "path": "documentation/fr.md",
-      "bytes": 3570,
-      "sha256": "b7e738dae390aaba37485e982aedaba4dc1d66cb29a774bec70bd1d462906a3f"
+      "bytes": 4193,
+      "sha256": "b39a9f361c2adc87320151e4d62fef8b985d3cfdf33b0b625a6c84390a47aa82"
     },
     {
       "path": "documentation/hi.md",
-      "bytes": 5792,
-      "sha256": "e2ede73d438ba60f7b5cf0b1ab65f8d2fbdbd259ff4226e1bf3a1329fb8e0a14"
+      "bytes": 7070,
+      "sha256": "507eac3e514ddea67f23bd8646d006aededf17cf134ece6e6874708489faf617"
     },
     {
       "path": "documentation/it.md",
-      "bytes": 3335,
-      "sha256": "a4220034f407883598939784226f814c3fd05816a76dcdbac11590c95d73ac96"
+      "bytes": 3881,
+      "sha256": "9a6a197e1803346258b1a01bec2826ca442ba27784d97c7f34ebca783bdc9b1b"
     },
     {
       "path": "documentation/ja.md",
-      "bytes": 3493,
-      "sha256": "88dcdf07ebf741f312fea27392c2e309d71b0508b72ed52812f6007e7105f1ed"
+      "bytes": 4049,
+      "sha256": "985b41cccf04d18a108f1430c68a937752676bf2b85d744080369c009d22d850"
     },
     {
       "path": "documentation/pt-BR.md",
-      "bytes": 3239,
-      "sha256": "f1a271fefe2289c3fcf0d5f97284b04ef1443bc3881a8b44a5183fe7885e6509"
+      "bytes": 3756,
+      "sha256": "701b60895ed8f77c40f3b4f0e425a63613eb3653703b86a7f0d124957d11f918"
     },
     {
       "path": "documentation/zh.md",
-      "bytes": 2707,
-      "sha256": "430bcef49aa6566876e53fe929312f9183c423b40c520e23fc99728fd9f571c4"
+      "bytes": 3157,
+      "sha256": "9b627213ad8b6137c903a0a8c7cb551a64abf43dbe78cc1a27124a54c1bc6989"
+    },
+    {
+      "path": "documented-result-examples.json",
+      "bytes": 15939,
+      "sha256": "a82ace3139fba8d78f164f3f4b7898c5fe20b4460775a0fcabc9ce1062fa0669"
     },
     {
       "path": "engine/tool-code/fracao-de-excrecao-de-sodio/calculator.js",
-      "bytes": 5226,
-      "sha256": "0e50f6e4a6a04b9b54c10c91283dfc51e9210df923a98d8d9676b3a639933f23"
+      "bytes": 5431,
+      "sha256": "4b7642e64226485e4173d02dff4d0a3372e344ff161445bf878f2fb1d5c8c500"
     },
     {
       "path": "evidence/publication-base-reference.json",
       "bytes": 2831,
       "sha256": "ecb59c722bd1e1a48a719d25adc4d896b95e5236ef7d97e8aa498b94fb45ee76"
+    },
+    {
+      "path": "evidence/publication-provenance-before-output-contract.json",
+      "bytes": 12118,
+      "sha256": "6b3f47200576412adfb0b0c9722c2bb0ccdde56da17076d7c0e56f5046e43e21"
     },
     {
       "path": "evidence/served-http-r6.json",
@@ -134,8 +144,8 @@
     },
     {
       "path": "localization.js",
-      "bytes": 44849,
-      "sha256": "ee7c6f2c5d42e53f3b15b944eb34cdde50f23056ddb2d9087cc6c2b06a006131"
+      "bytes": 56593,
+      "sha256": "0953d702e0590c9f60dd7b74a82dce323b08f1e4f452e6d0673a54a7e8686b43"
     },
     {
       "path": "METHOD-CODE-LICENSE.txt",
@@ -154,23 +164,23 @@
     },
     {
       "path": "package.json",
-      "bytes": 397,
-      "sha256": "6bb2847da77862a17eb94d62351872584e73d8043663386d79d46e01a784861b"
+      "bytes": 491,
+      "sha256": "81db30f369f491d817b72554b122b704538fee975a47ba51830e8439e4b7e696"
     },
     {
       "path": "portal-formatters.browser.js",
-      "bytes": 31300,
-      "sha256": "d8522ffe0b858012dfd25e5e8d10fe2eefec977f2bdb612be5cbadf5c4bed9f3"
+      "bytes": 38687,
+      "sha256": "cf0668f6fd44a80a3e4064915cf2da02d2203a9596bd39a9a0a6025fb12e17f4"
     },
     {
       "path": "publication-provenance.json",
-      "bytes": 12118,
-      "sha256": "6b3f47200576412adfb0b0c9722c2bb0ccdde56da17076d7c0e56f5046e43e21"
+      "bytes": 6401,
+      "sha256": "dfc28973c5cb48bb6df22d00bb520e9011abad4a50e5a9458eea7a5640af1c8a"
     },
     {
       "path": "README.md",
-      "bytes": 3228,
-      "sha256": "e1be47fec2ce0edc9183f3231c2be7660f0252a18cc5e874acb0f158f2e4ffd2"
+      "bytes": 3821,
+      "sha256": "c2fa8fcd4262bff1648ddfaf166ffe4e71ecbb4d3a629b16591dba34dec27547"
     },
     {
       "path": "rejections.json",
@@ -188,9 +198,24 @@
       "sha256": "3c20d46e436116be0c673f0260b24bbc2193fafbd15fb4659bf0e545b452487e"
     },
     {
+      "path": "source-result-contract.json",
+      "bytes": 5227,
+      "sha256": "d0ffe49df2e7bad8477a94a9aa50397d66a09d297c552bfeac1a8baaa741521a"
+    },
+    {
       "path": "SOURCE-RIGHTS-REVIEW.md",
       "bytes": 1787,
       "sha256": "71e8cb61a7a05416fe6aaaf6a847e926c34157af4e42d67c654a6017e3b99ae7"
+    },
+    {
+      "path": "test-presentation-contract.cjs",
+      "bytes": 1923,
+      "sha256": "a4a1734ea3d00c17ffeed7abbd605663459b7c190b695d2396cc58da93215cec"
+    },
+    {
+      "path": "test-source-result-contract.cjs",
+      "bytes": 1416,
+      "sha256": "cbadaf0576ecc2884c7523902880d2068e3a9b6b63df418359ab42219af2e386"
     },
     {
       "path": "test.cjs",
@@ -199,8 +224,8 @@
     },
     {
       "path": "tool.json",
-      "bytes": 14538,
-      "sha256": "a3fa8ff467f66c04b8dbf16273623f933fb3469475a6c2f59b483b3528d12659"
+      "bytes": 16064,
+      "sha256": "51b50dad5e3bdadfd1a15817116aabe71f07142b20019677892909bb9b842a96"
     }
   ]
 }

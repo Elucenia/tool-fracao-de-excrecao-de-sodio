@@ -1,0 +1,183 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "fracao-de-excrecao-de-sodio",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "65b3c178e0af2ff692e2b15bca94aa6c58c95dbe",
+    "oldEngineSha256": "0e50f6e4a6a04b9b54c10c91283dfc51e9210df923a98d8d9676b3a639933f23",
+    "currentEngineSha256": "4b7642e64226485e4173d02dff4d0a3372e344ff161445bf878f2fb1d5c8c500"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+      "input": {
+        "una": 10,
+        "pna": 140,
+        "ucr": 100,
+        "pcr": 2,
+        "diuretico": "0"
+      },
+      "publicOutput": {
+        "id": "fracao-de-excrecao-de-sodio",
+        "main": [
+          "0,14",
+          "%"
+        ],
+        "label": "Fração de excreção de sódio",
+        "raw": {
+          "fena": 0.14285714285714285
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fena": 0.1429
+        },
+        "level": "mid",
+        "verdict": "pré-renal",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0,14",
+          "%"
+        ],
+        "label": "Fração de excreção de sódio",
+        "level": "mid",
+        "verdict": "FENa &lt; 1%: sugere azotemia pré-renal (túbulo preservado, retendo sódio)",
+        "note": "",
+        "raw": {
+          "fena": 0.14285714285714285
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+      "input": {
+        "una": 35,
+        "pna": 140,
+        "ucr": 50,
+        "pcr": 2,
+        "diuretico": "0"
+      },
+      "publicOutput": {
+        "id": "fracao-de-excrecao-de-sodio",
+        "main": [
+          "1,00",
+          "%"
+        ],
+        "label": "Fração de excreção de sódio",
+        "raw": {
+          "fena": 1
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fena": 1
+        },
+        "main": "1,00",
+        "verdict": "intermediária",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "1,00",
+          "%"
+        ],
+        "label": "Fração de excreção de sódio",
+        "level": "mid",
+        "verdict": "FENa entre 1 e 2%: zona intermediária, interpretar com a clínica",
+        "note": "",
+        "raw": {
+          "fena": 1
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+      "input": {
+        "una": 60,
+        "pna": 135,
+        "ucr": 40,
+        "pcr": 4,
+        "diuretico": "1"
+      },
+      "publicOutput": {
+        "id": "fracao-de-excrecao-de-sodio",
+        "main": [
+          "4,44",
+          "%"
+        ],
+        "label": "Fração de excreção de sódio",
+        "raw": {
+          "fena": 4.444444444444445
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fena": 4.444
+        },
+        "level": "high",
+        "verdict": "necrose tubular",
+        "tol": 0.01
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "4,44",
+          "%"
+        ],
+        "label": "Fração de excreção de sódio",
+        "level": "high",
+        "verdict": "FENa &gt; 2%: sugere necrose tubular aguda (lesão renal intrínseca)",
+        "note": "Com diurético nas últimas 24 h, a FENa sobe mesmo no estado pré-renal: prefira a fração de excreção de ureia.",
+        "raw": {
+          "fena": 4.444444444444445
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    }
+  ]
+}

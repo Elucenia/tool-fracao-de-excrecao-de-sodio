@@ -169,7 +169,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "FENa/Espinel 1976:Miller 1978,100×UNa×PCr/(PNa×UCr); amostras simultâneas",
-    "implementationVersion": "fracao-de-excrecao-de-sodio@native-2026-10-04+0e50f6e4a6a0",
+    "implementationVersion": "fracao-de-excrecao-de-sodio@native-2026-10-05+4b7642e64226",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/666184/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -332,14 +332,42 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "0e50f6e4a6a04b9b54c10c91283dfc51e9210df923a98d8d9676b3a639933f23",
+      "implementationHash": "4b7642e64226485e4173d02dff4d0a3372e344ff161445bf878f2fb1d5c8c500",
       "technicalAmendment": {
         "date": "2026-10-04",
         "scope": "Removed premature six-decimal rounding before comparison with the unchanged source thresholds. Formula, fields and two-decimal main display retained.",
         "evidencePath": "reports/review-20261003/independent-fena-precision-amendment-final22.json",
         "baselineFailureCount": 216,
         "clinicalApproval": "not-performed"
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "fracao-de-excrecao-de-sodio@native-2026-10-04+0e50f6e4a6a0",
+          "previousImplementationHash": "0e50f6e4a6a04b9b54c10c91283dfc51e9210df923a98d8d9676b3a639933f23",
+          "implementationHash": "4b7642e64226485e4173d02dff4d0a3372e344ff161445bf878f2fb1d5c8c500",
+          "scientificBodySha256": "decaf81904c0eaa5f9695398d2e5b4bdf32fc8643a2fafdb5e9501314afc8bac",
+          "metadataContractHash": "a69e38f83e88fb111181d8aeb861fa341b2c056759af2a50fccb307e2d817a00",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "A evidência de Miller 1978 refere-se à oligúria aguda e mostrou que índices urinários nem sempre separam causas pré-renais de necrose tubular. O resultado não estabelece sozinho a etiologia da disfunção renal. Condições clínicas, momento das amostras e medicamentos precisam ser considerados conforme a fonte da versão utilizada.",
     "sourceLimitEvidence": {
@@ -358,15 +386,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/fracao-de-excrecao-de-sodio/calculator.js",
-    "bytes": 5226,
-    "sha256": "0e50f6e4a6a04b9b54c10c91283dfc51e9210df923a98d8d9676b3a639933f23"
+    "bytes": 5431,
+    "sha256": "4b7642e64226485e4173d02dff4d0a3372e344ff161445bf878f2fb1d5c8c500"
   },
-  "sourceToolSha256": "608774ac22680ad478ac89b9ebaa76ec6ecd6732b69a9181206a4226f1d69cc9",
+  "sourceToolSha256": "5b5f1ca507a73ebe89080e14ad822b5052fa208697c185f882c6ba065c7df152",
   "omittedFullReferenceBanks": [
     {
       "rows": 216,
       "sha256": "353e350058cf1726e7125d587fd50b8e24fd5bc4bcd94326780951341c679808",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

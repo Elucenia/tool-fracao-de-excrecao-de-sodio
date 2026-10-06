@@ -1,0 +1,437 @@
+{
+  "id": "fracao-de-excrecao-de-sodio",
+  "implementationVersion": "fracao-de-excrecao-de-sodio@native-2026-10-05+4b7642e64226",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1%: sugere azotemia pré-renal (túbulo preservado, retendo sódio)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa entre 1 e 2%: zona intermediária, interpretar com a clínica",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2%: sugere necrose tubular aguda (lesão renal intrínseca)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Com diurético nas últimas 24 h, a FENa sobe mesmo no estado pré-renal: prefira a fração de excreção de ureia.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1%: suggests prerenal azotemia (tubule preserved, retaining sodium)",
+            "locale": "en",
+            "template": "documented-authored-b5041908193360480637"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa between 1 and 2%: intermediate zone, interpret with the clinical picture",
+            "locale": "en",
+            "template": "documented-authored-479645d53225b31082ee"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2%: suggests acute tubular necrosis (intrinsic renal injury)",
+            "locale": "en",
+            "template": "documented-authored-54b3a3bceaf0c3ead6fb"
+          },
+          "note": {
+            "text": "With a diuretic in the last 24 h, FENa rises even in the prerenal state: prefer the fractional excretion of urea.",
+            "locale": "en",
+            "template": "documented-authored-bfce60bca991fb9462a2"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1%: sugiere azotemia prerrenal (túbulo preservado, reteniendo sodio)",
+            "locale": "es",
+            "template": "documented-authored-b5041908193360480637"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa entre 1 y 2%: zona intermedia, interpretar con la clínica",
+            "locale": "es",
+            "template": "documented-authored-479645d53225b31082ee"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2%: sugiere necrosis tubular aguda (lesión renal intrínseca)",
+            "locale": "es",
+            "template": "documented-authored-54b3a3bceaf0c3ead6fb"
+          },
+          "note": {
+            "text": "Con diurético en las últimas 24 h, la FENa aumenta incluso en el estado prerrenal: prefiera la fracción de excreción de urea.",
+            "locale": "es",
+            "template": "documented-authored-bfce60bca991fb9462a2"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1 % : suggère une azotémie prérénale (tubule préservé, rétention de sodium)",
+            "locale": "fr",
+            "template": "documented-authored-b5041908193360480637"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa entre 1 et 2 % : zone intermédiaire, à interpréter avec le contexte clinique",
+            "locale": "fr",
+            "template": "documented-authored-479645d53225b31082ee"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2 % : suggère une nécrose tubulaire aiguë (atteinte rénale intrinsèque)",
+            "locale": "fr",
+            "template": "documented-authored-54b3a3bceaf0c3ead6fb"
+          },
+          "note": {
+            "text": "Avec un diurétique dans les dernières 24 h, la FENa augmente même en état prérénal : privilégier la fraction d’excrétion de l’urée.",
+            "locale": "fr",
+            "template": "documented-authored-bfce60bca991fb9462a2"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1 %: spricht für prärenale Azotämie (Tubulus erhalten, Natriumretention)",
+            "locale": "de",
+            "template": "documented-authored-b5041908193360480637"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa zwischen 1 und 2 %: Zwischenbereich, im klinischen Kontext interpretieren",
+            "locale": "de",
+            "template": "documented-authored-479645d53225b31082ee"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2 %: spricht für akute Tubulusnekrose (intrinsische Nierenschädigung)",
+            "locale": "de",
+            "template": "documented-authored-54b3a3bceaf0c3ead6fb"
+          },
+          "note": {
+            "text": "Bei Diuretika in den letzten 24 h steigt die FENa auch im prärenalen Zustand an: bevorzugen Sie die fraktionelle Harnstoffexkretion.",
+            "locale": "de",
+            "template": "documented-authored-bfce60bca991fb9462a2"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1%: suggerisce azotemia prerenale (tubulo preservato, con ritenzione di sodio)",
+            "locale": "it",
+            "template": "documented-authored-b5041908193360480637"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa tra 1 e 2%: zona intermedia, interpretare con il quadro clinico",
+            "locale": "it",
+            "template": "documented-authored-479645d53225b31082ee"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2%: suggerisce necrosi tubulare acuta (lesione renale intrinseca)",
+            "locale": "it",
+            "template": "documented-authored-54b3a3bceaf0c3ead6fb"
+          },
+          "note": {
+            "text": "Con diuretico nelle ultime 24 h, la FENa aumenta anche nello stato prerenale: preferire la frazione di escrezione dell’urea.",
+            "locale": "it",
+            "template": "documented-authored-bfce60bca991fb9462a2"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1%: يوحي بأزوتيميا قبل كلوية (النبيب محفوظ، مع احتباس الصوديوم)",
+            "locale": "ar",
+            "template": "documented-authored-b5041908193360480637"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa بين 1 و2%: منطقة متوسطة، تُفسَّر مع الصورة السريرية",
+            "locale": "ar",
+            "template": "documented-authored-479645d53225b31082ee"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2%: يوحي بالنخر الأنبوبي الحاد (أذية كلوية داخلية)",
+            "locale": "ar",
+            "template": "documented-authored-54b3a3bceaf0c3ead6fb"
+          },
+          "note": {
+            "text": "مع استخدام مُدرّ للبول خلال آخر 24 ساعة، ترتفع FENa حتى في الحالة قبل الكلوية: يُفضَّل جزء الإطراح البولي لليوريا.",
+            "locale": "ar",
+            "template": "documented-authored-bfce60bca991fb9462a2"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1%：提示肾前性氮质血症（小管保留，保留钠）",
+            "locale": "zh",
+            "template": "documented-authored-b5041908193360480637"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa在1和2%之间：中间区间，结合临床情况解释",
+            "locale": "zh",
+            "template": "documented-authored-479645d53225b31082ee"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2%：提示急性肾小管坏死（肾实质性损伤）",
+            "locale": "zh",
+            "template": "documented-authored-54b3a3bceaf0c3ead6fb"
+          },
+          "note": {
+            "text": "在过去24 h内使用利尿剂时，即使在肾前状态，FENa也会升高：优先采用尿素排泄分数。",
+            "locale": "zh",
+            "template": "documented-authored-bfce60bca991fb9462a2"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1%: 腎前性アゾテミアを示唆する（尿細管は保たれ、ナトリウムを保持）",
+            "locale": "ja",
+            "template": "documented-authored-b5041908193360480637"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa 1～2%: 中間域、臨床像と併せて解釈する",
+            "locale": "ja",
+            "template": "documented-authored-479645d53225b31082ee"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2%: 急性尿細管壊死（腎性障害）を示唆する",
+            "locale": "ja",
+            "template": "documented-authored-54b3a3bceaf0c3ead6fb"
+          },
+          "note": {
+            "text": "過去24 hに利尿薬を使用すると、腎前性でもFENaは上昇する：尿素排泄分画を優先する。",
+            "locale": "ja",
+            "template": "documented-authored-bfce60bca991fb9462a2"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "UNa 10, PNa 140, UCr 100, PCr 2,0: FENa 0,14% (pré-renal)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa < 1%: प्रीरेनल एज़ोटेमिया का सुझाव देता है (ट्यूब्यूल संरक्षित, सोडियम को बनाए रखते हुए)",
+            "locale": "hi",
+            "template": "documented-authored-b5041908193360480637"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 35, PNa 140, UCr 50, PCr 2,0: FENa exatamente 1% (zona intermediária)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa 1 और 2% के बीच: मध्यवर्ती क्षेत्र, नैदानिक स्थिति के साथ व्याख्या करें",
+            "locale": "hi",
+            "template": "documented-authored-479645d53225b31082ee"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "UNa 60, PNa 135, UCr 40, PCr 4,0: FENa 4,44% (NTA)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FENa > 2%: तीव्र ट्यूब्यूलर नेक्रोसिस (आंतरिक वृक्क चोट) का सुझाव देता है",
+            "locale": "hi",
+            "template": "documented-authored-54b3a3bceaf0c3ead6fb"
+          },
+          "note": {
+            "text": "पिछले 24 h में मूत्रवर्धक होने पर, प्रीरेनल स्थिति में भी FENa बढ़ जाता है: यूरिया की अंशीय उत्सर्जन को प्राथमिकता दें।",
+            "locale": "hi",
+            "template": "documented-authored-bfce60bca991fb9462a2"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

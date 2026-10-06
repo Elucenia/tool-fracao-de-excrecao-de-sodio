@@ -88,3 +88,24 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+FENa < 1%: suggests prerenal azotemia (tubule preserved, retaining sodium)
+
+
+### 2
+
+FENa between 1 and 2%: intermediate zone, interpret with the clinical picture
+
+
+### 3
+
+FENa > 2%: suggests acute tubular necrosis (intrinsic renal injury)
+
+With a diuretic in the last 24 h, FENa rises even in the prerenal state: prefer the fractional excretion of urea.
+
